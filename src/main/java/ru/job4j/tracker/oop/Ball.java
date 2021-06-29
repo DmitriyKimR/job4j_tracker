@@ -7,6 +7,6 @@ public class Ball {
     public void run(Wolf wolf) {
     }
 
-    public void wasEat(Fox fox) {
+    public void wasEaten(Fox fox) {
     }
 }
