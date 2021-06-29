@@ -5,6 +5,9 @@ public class Error {
     private int status;
     private String message;
 
+    public Error() {
+    }
+
     public Error(boolean active, int status, String message) {
         this.active = active;
         this.status = status;
@@ -22,8 +25,5 @@ public class Error {
         Error start = new Error();
         error.printInfo();
         start.printInfo();
-    }
-
-    public Error() {
     }
 }
