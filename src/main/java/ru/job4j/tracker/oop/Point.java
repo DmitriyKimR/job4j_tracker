@@ -37,8 +37,4 @@ public class Point {
         double distance = c.distance3d(d);
         System.out.println("Distance from a to b is: " + distance);
     }
-
-
-
-
 }
