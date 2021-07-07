@@ -5,8 +5,11 @@ public class Surgeon extends Doctor {
     private String examines;
     private String heal;
 
-    public Surgeon() {
-        super();
+    public Surgeon(String name, String surname, String education, String birthday, String patientAgeGroup, String referral, int age, String listenPatient, String examines, String heal) {
+        super(name, surname, education, birthday, patientAgeGroup, referral, age);
+        this.listenPatient = listenPatient;
+        this.examines = examines;
+        this.heal = heal;
     }
 
     public String getListenPatient;

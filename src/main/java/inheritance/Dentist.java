@@ -5,8 +5,12 @@ public class Dentist extends Doctor {
     private String procedure;
     private String handedThePatient;
 
-    public Dentist() {
-        super();
+    public Dentist(String name, String surname, String education, String birthday, String patientAgeGroup, String referral, int age, String teethExamination, String procedure, String handedThePatient) {
+        super(name, surname, education, birthday, patientAgeGroup, referral, age);
+        this.teethExamination = teethExamination;
+        this.procedure = procedure;
+        this.handedThePatient = handedThePatient;
+
     }
 
     public String getTeethExamination;

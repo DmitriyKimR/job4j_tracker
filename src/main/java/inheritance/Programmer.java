@@ -5,8 +5,11 @@ public class Programmer extends Engineer {
     private String technology;
     private String language;
 
-    public Programmer() {
-        super();
+    public Programmer(String name, String surname, String education, String birthday, String industry, String speciality, String backend, String technology, String language) {
+        super(name, surname, education, birthday, industry, speciality);
+        this.backend = backend;
+        this.technology = technology;
+        this.language = language;
     }
 
     public String getBackend;

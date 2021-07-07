@@ -5,8 +5,11 @@ public class Doctor extends Profession {
     private String referral;
     private int age;
 
-    public Doctor() {
-    super();
+    public Doctor(String name, String surname, String education, String birthday, String patientAgeGroup, String referral, int age) {
+        super(name, surname, education, birthday);
+        this.patientAgeGroup = patientAgeGroup;
+        this.referral = referral;
+        this.age = age;
     }
 
     public String getPatientAgeGroup;
