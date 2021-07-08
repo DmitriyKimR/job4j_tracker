@@ -8,7 +8,9 @@ public class Dentist extends Doctor {
         this.procedure = procedure;
     }
 
-    public String getProcedure;
+    public String getProcedure() {
+        return procedure;
+    }
 
     public String setProcedure(String procedure) {
         this.procedure = procedure;

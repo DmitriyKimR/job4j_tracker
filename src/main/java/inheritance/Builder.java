@@ -8,7 +8,9 @@ public class Builder extends Engineer {
         this.speciality = speciality;
     }
 
-    public String getSpeciality;
+    public String getSpeciality() {
+        return speciality;
+    }
 
     public String setSpeciality(String speciality) {
         this.speciality = speciality;

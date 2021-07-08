@@ -9,7 +9,10 @@ public class Surgeon extends Doctor {
 
     }
 
-    public String getReferral;
+    public String getReferral() {
+        return referral;
+    }
+
 
     public String setReferral(String referral) {
         this.referral = referral;

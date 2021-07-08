@@ -8,7 +8,9 @@ public class Engineer extends Profession {
         this.industry = industry;
     }
 
-    public String getIndustry;
+    public String getIndustry() {
+        return industry;
+    }
 
     public String setIndustry(String industry) {
         this.industry = industry;

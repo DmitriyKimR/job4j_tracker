@@ -8,7 +8,9 @@ public class Doctor extends Profession {
         this.patientAgeGroup = patientAgeGroup;
     }
 
-    public String getPatientAgeGroup;
+    public String getPatientAgeGroup() {
+        return patientAgeGroup;
+    }
 
     public String setPatientAgeGroup(String patientAgeGroup) {
         this.patientAgeGroup = patientAgeGroup;

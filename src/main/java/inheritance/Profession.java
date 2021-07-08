@@ -14,10 +14,21 @@ public class Profession {
 
     }
 
-    public String getName;
-    public String getSurname;
-    public String getEducation;
-    public String getBirthday;
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getEducation() {
+        return education;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
 
     public String setName(String name) {
         this.name = name;
