@@ -4,8 +4,7 @@ public class Library {
     public static void main(String[] args) {
         Book entry = new Book("Java entry.", 600);
         Book thinking = new Book("Java thinking.", 560);
-        Book philosophy = new Book("Java philosophy.", 650);
-        Book code = new Book("Java code.",830);
+        Book code = new Book("Java code.", 830);
         Book cleanCode = new Book("Clean code", 1200);
         Book[] cleaCode = new Book[4];
         cleaCode[0] = entry;
@@ -19,7 +18,7 @@ public class Library {
         cleaCode[0] = cleaCode[3];
         cleaCode[3] = temp;
         for (Book index : cleaCode) {
-            if (index == cleanCode) {
+            if ("Clean code".equals(index.getName())) {
                 System.out.println(index.getName() + " with number of pages " + index.getNumber());
             }
         }
