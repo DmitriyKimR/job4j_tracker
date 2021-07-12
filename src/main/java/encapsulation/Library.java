@@ -11,16 +11,14 @@ public class Library {
         cleaCode[1] = thinking;
         cleaCode[2] = philosophy;
         cleaCode[3] = code;
-        for (int index = 0; index < cleaCode.length; index++) {
-            Book chapter = cleaCode[index];
-            System.out.println(chapter.getName() + " with number of pages " + chapter.getNumber());
+        for (Book index : cleaCode) {
+            System.out.println(index.getName() + " with number of pages " + index.getNumber());
         }
         Book temp = cleaCode[0];
         cleaCode[0] = cleaCode[3];
         cleaCode[3] = temp;
-        for (int index = 0; index < cleaCode.length; index++) {
-            Book chapter = cleaCode[index];
-            System.out.println(chapter.getName() + " with number of pages " + chapter.getNumber());
+        for (Book index : cleaCode) {
+            System.out.println(index.getName() + " with number of pages " + index.getNumber() + " Clean code");
         }
     }
 }
