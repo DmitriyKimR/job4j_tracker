@@ -18,7 +18,7 @@ public class Tracker {
     }
 
     public Item[] findByName(String key) {
-        Item[] findByName = new Item[items.length];
+        Item[] findByName = new Item[size];
         int rsl = 0;
         for (int i = 0; i < size; i++) {
             if (key.equals(items[i].getName())) {
@@ -31,7 +31,7 @@ public class Tracker {
 
     private int indexOf(int id) {
         int rsl = -1;
-        for(int index = 0; index < size; index++) {
+        for (int index = 0; index < size; index++) {
             if (items[index].getId() == id) {
                 rsl = index;
                 break;
