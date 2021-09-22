@@ -1,12 +1,8 @@
 package ru.job4j.tracker.oop;
 
 public class Ball {
-    public void run(Hare hare) {
+    public String tryRun(boolean condition) {
+        return condition ? "Колобок сбежал." : "Колобка съели.";
     }
 
-    public void run(Wolf wolf) {
-    }
-
-    public void wasEaten(Fox fox) {
-    }
 }
