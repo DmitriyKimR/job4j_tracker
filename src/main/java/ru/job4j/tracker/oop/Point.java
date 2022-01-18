@@ -23,7 +23,7 @@ public class Point {
         return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
-    public double distance3d( Point that) {
+    public double distance3d(Point that) {
         return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2) + pow(this.z - that.z, 2));
     }
 
@@ -33,7 +33,7 @@ public class Point {
         double dist = a.distance(b);
         System.out.println("Distance from a to b is: " + dist);
         Point c = new Point(0, 0, 0);
-        Point d = new Point(2, 0,0);
+        Point d = new Point(2, 0, 0);
         double distance = c.distance3d(d);
         System.out.println("Distance from a to b is: " + distance);
     }

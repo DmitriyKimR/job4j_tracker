@@ -17,8 +17,6 @@ public class MagicBall {
             } else {
                 System.out.println("Может быть");
             }
-        } else {
-            return;
         }
     }
 }

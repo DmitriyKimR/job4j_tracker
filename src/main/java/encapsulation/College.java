@@ -8,6 +8,9 @@ public class College {
         student.setName("Kim Dmitri");
         student.setGroup("Beginner");
         student.setEntry(new Date());
-        System.out.println(student.getName() + " studying on a " + student.getGroup() + " now at " + student.getEntry());
+        System.out.println(
+                student.getName() + " studying on a "
+                + student.getGroup() + " now at "
+                + student.getEntry());
     }
 }

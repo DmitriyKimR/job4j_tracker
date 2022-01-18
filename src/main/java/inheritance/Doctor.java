@@ -3,7 +3,8 @@ package inheritance;
 public class Doctor extends Profession {
     private String patientAgeGroup;
 
-    public Doctor(String name, String surname, String education, String birthday, String patientAgeGroup) {
+    public Doctor(String name, String surname,
+                  String education, String birthday, String patientAgeGroup) {
         super(name, surname, education, birthday);
         this.patientAgeGroup = patientAgeGroup;
     }
