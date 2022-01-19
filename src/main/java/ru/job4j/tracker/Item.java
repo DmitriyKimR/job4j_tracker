@@ -10,7 +10,7 @@ public class Item {
     private int id;
     private String name;
     private LocalDateTime created = LocalDateTime.now();
-    private DateTimeFormatter formatter =
+    private static  final DateTimeFormatter formatter =
             DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
 
     public Item() {
