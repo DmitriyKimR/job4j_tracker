@@ -11,7 +11,7 @@ public class StartUi {
             showMenu();
             System.out.println("Select: ");
             int select = Integer.parseInt(scanner.nextLine());
-            if (select !=6) {
+            if (select != 6) {
                 System.out.println("Пользователь выбрал: " + select);
             } else {
                 run = false;
