@@ -14,6 +14,7 @@ public class Matches {
             int matches = Integer.parseInt(input.nextLine());
             turn = !turn;
             count -= matches;
+            System.out.println("Осталось " + count + " спичек на столе.");
         }
         if (!turn) {
             System.out.println("Выиграл первый игрок");
