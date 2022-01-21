@@ -1,10 +1,8 @@
 package ru.job4j.tracker;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class StartUi {
+public class StartUI {
     public void init(Scanner scanner, Tracker tracker) {
         boolean run = true;
         while (run) {
@@ -61,6 +59,6 @@ public class StartUi {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Tracker tracker = new Tracker();
-        new StartUi().init(scanner, tracker);
+        new StartUI().init(scanner, tracker);
     }
 }
