@@ -24,10 +24,26 @@ public class StartUITest {
 
     @Test
     public void replaceItemById() {
+        Tracker tracker = new Tracker();
+        Item item = new Item("new item");
+        tracker.add(item);
+        String[] answers = {
+                String.valueOf(item.getId()), "edited item" };
+        StartUI.replaceItemById(new StubInput(answers), tracker);
+        Item edited = tracker.findById(item.getId());
+        assertThat(edited.getName(), is("edited item"));
     }
 
     @Test
     public void deleteItemById() {
+        Tracker tracker = new Tracker();
+        Item item = new Item("item for delete");
+        tracker.add(item);
+        String[] answers = {
+                String.valueOf(item.getId()), null};
+        StartUI.deleteItemById(new StubInput(answers), tracker);
+        Item deleted = tracker.findById(item.getId());
+        assertNull(deleted);
     }
 
     @Test
