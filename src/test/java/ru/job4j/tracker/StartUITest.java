@@ -19,10 +19,6 @@ public class StartUITest {
     }
 
     @Test
-    public void findAllItems() {
-    }
-
-    @Test
     public void replaceItemById() {
         Tracker tracker = new Tracker();
         Item item = new Item("new item");
@@ -44,21 +40,5 @@ public class StartUITest {
         StartUI.deleteItemById(new StubInput(answers), tracker);
         Item deleted = tracker.findById(item.getId());
         assertNull(deleted);
-    }
-
-    @Test
-    public void findItemById() {
-    }
-
-    @Test
-    public void findItemByName() {
-    }
-
-    @Test
-    public void init() {
-    }
-
-    @Test
-    public void main() {
     }
 }
