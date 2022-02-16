@@ -9,7 +9,7 @@ public class StartUITest {
 
     @Test
     public void createItem() {
-        String[] answers = {"Fix PC" };
+        String[] answers = {"Fix PC"};
         Input input = new StubInput(answers);
         Tracker tracker = new Tracker();
         StartUI.createItem(input, tracker);
@@ -24,7 +24,7 @@ public class StartUITest {
         Item item = new Item("new item");
         tracker.add(item);
         String[] answers = {
-                String.valueOf(item.getId()), "edited item" };
+                String.valueOf(item.getId()), "edited item"};
         StartUI.replaceItemById(new StubInput(answers), tracker);
         Item edited = tracker.findById(item.getId());
         assertThat(edited.getName(), is("edited item"));
@@ -36,7 +36,7 @@ public class StartUITest {
         Item item = new Item("item for delete");
         tracker.add(item);
         String[] answers = {
-                String.valueOf(item.getId()), null};
+                String.valueOf(item.getId())};
         StartUI.deleteItemById(new StubInput(answers), tracker);
         Item deleted = tracker.findById(item.getId());
         assertNull(deleted);
