@@ -1,24 +1,40 @@
 package ru.job4j.tracker;
 
-import com.sun.jdi.connect.Connector;
-import org.junit.Test;
+//import org.junit.Test;
+import org.hamcrest.MatcherAssert;
+import org.junit.jupiter.api.Test;
 
-import javax.sound.midi.Track;
+import java.util.List;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class StartUITest {
 
     @Test
     public void whenCreateItem() {
         Output out = new StubOutput();
-        Input in = new StubInput(new String[]{"0", "Item name", "1"});
+        List<String> in = new ArrayList<>();
+        String one = "0";
+        String two = "Item name";
+        String three = "1";
+        in.add(0, one);
+        in.add(1, two);
+        in.add(2, three);
+        //Input in = new StubInput(new String[]{"0", "Item name", "1"});
         Tracker tracker = new Tracker();
-        UserAction[] actions = {new CreateAction(out), new ExitAction(out)};
+        List<UserAction> actions = new ArrayList<>();
+        actions.add(0, new CreateAction(out));
+        actions.add(1, new ExitAction(out));
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findAll()[0].getName(), is("Item name"));
+        assertThat(tracker.findAll().)
+        /*UserAction[] actions = {new CreateAction(out), new ExitAction(out)};
+        new StartUI(out).init(in, tracker, actions);
+        assertThat(tracker.findAll()[0].getName(), is("Item name"));*/
     }
 
     @Test
@@ -39,9 +55,12 @@ public class StartUITest {
         Item item = tracker.add(new Item("Deleted item"));
         Output out = new StubOutput();
         Input in = new StubInput(new String[]{"0", String.valueOf(item.getId()), "1"});
-        UserAction[] actions = new UserAction[]{new DeleteAction(out), new ExitAction(out)};
+        List<UserAction> actions = new ArrayList<>();
+        actions.add();
+        //UserAction[] actions = new UserAction[]{new DeleteAction(out), new ExitAction(out)};
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findById(item.getId()), is(nullValue()));
+
+        // assertThat(tracker.findById(item.getId()), is(nullValue()));
     }
 
     @Test
