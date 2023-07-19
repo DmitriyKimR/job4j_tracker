@@ -1,7 +1,5 @@
 package ru.job4j.tracker;
 
-import java.util.List;
-
 public class ExitAction implements UserAction {
     private final Output out;
 
@@ -15,7 +13,7 @@ public class ExitAction implements UserAction {
     }
 
     @Override
-    public boolean execute(List<Input> input, Tracker tracker) {
+    public boolean execute(Input input, Tracker tracker) {
         return false;
     }
 }

@@ -1,7 +1,5 @@
 package ru.job4j.tracker;
 
-import java.util.List;
-
 public class CreateAction implements UserAction {
     private final Output out;
 
@@ -15,7 +13,7 @@ public class CreateAction implements UserAction {
     }
 
     @Override
-    public boolean execute(List<Input> input, Tracker tracker) {
+    public boolean execute(Input input, Tracker tracker) {
         out.println("=== Create a new Item ===");
         String name = input.askStr("Enter name: ");
         Item item = new Item(name);

@@ -15,12 +15,10 @@ public class ShowAllAction implements UserAction {
     }
 
     @Override
-    public boolean execute(List<Input> input, Tracker tracker) {
+    public boolean execute(Input input, Tracker tracker) {
         out.println("=== Show all items ===");
         List<Item> items = tracker.findAll();
         if (!items.isEmpty()) {
-       /* Item[] items = tracker.findAll();
-        if (items.length > 0) {*/
             for (Item item : items) {
                 out.println(item);
             }
