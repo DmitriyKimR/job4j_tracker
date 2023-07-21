@@ -23,7 +23,7 @@ class AppleStoreTest {
         int count = 4;
         AppleStore appleStore = new AppleStore(customers, count);
         String customer = appleStore.getLastHappyCustomer();
-        assertEquals(customer, ("Alexei"));
+        assertEquals(("Alexei"), customer);
     }
 
     @Test
@@ -37,6 +37,6 @@ class AppleStoreTest {
         int count = 4;
         AppleStore appleStore = new AppleStore(customers, count);
         String customer = appleStore.getFirstUpsetCustomer();
-        assertEquals(customer, ("Iryna"));
+        assertEquals(("Iryna"), customer);
     }
 }

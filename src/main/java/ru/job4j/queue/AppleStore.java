@@ -14,13 +14,13 @@ public class AppleStore {
 
     public String getLastHappyCustomer() {
         Queue<Customer> result = queue;
-        String lastHappyCustomer  = null;
-        int happy = 0;
-        for (int i = 0; i < result.size(); i++) {
-            result.poll();
-            happy++;
-            if (happy == count - 1) {
+        String lastHappyCustomer = null;
+        int size = result.size();
+        for (int i = 1; i < size; i++) {
+            if (i == count) {
                 lastHappyCustomer = Objects.requireNonNull(result.poll()).name();
+            } else {
+                result.poll();
             }
         }
         return lastHappyCustomer;
@@ -29,12 +29,12 @@ public class AppleStore {
     public String getFirstUpsetCustomer() {
         Queue<Customer> result = queue;
         String firstUpsetCustomer = null;
-        int upset = 0;
-        for (int i = 0; i < result.size(); i++) {
-            result.poll();
-            upset++;
-            if (upset == count) {
+        int size = result.size();
+        for (int i = 0; i < size; i++) {
+            if (i == count) {
                 firstUpsetCustomer = Objects.requireNonNull(result.poll()).name();
+            } else {
+                result.poll();
             }
         }
         return firstUpsetCustomer;
