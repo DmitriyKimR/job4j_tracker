@@ -19,6 +19,6 @@ class UniqueTestTest {
         UniqueTest uniqueTest = new UniqueTest();
         String origin = "My cat eats a mouse";
         String text = "A mouse is eaten by a cat";
-        assertTrue(uniqueTest.isEquals(origin, text));
+        assertFalse(uniqueTest.isEquals(origin, text));
     }
 }
