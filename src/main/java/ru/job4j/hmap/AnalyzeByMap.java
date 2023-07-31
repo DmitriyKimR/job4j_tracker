@@ -72,8 +72,8 @@ public class AnalyzeByMap {
         }
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             result.add(new Label(entry.getKey(), entry.getValue()));
-            result.sort(Comparator.naturalOrder());
         }
+            result.sort(Comparator.naturalOrder());
         return result.get(result.size() - 1);
     }
 }
