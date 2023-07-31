@@ -15,7 +15,7 @@ public class ItemTest {
         Item third = new Item("Sofa");
         Item fourth = new Item("Closet");
         List<Item> items = new ArrayList<>(List.of(first,
-                second,third, fourth));
+                second, third, fourth));
         items.sort(new ItemAscByName());
         List<Item> expected = new ArrayList<>(List.of(second, fourth, third, first));
         assertEquals(expected, items);
@@ -28,7 +28,7 @@ public class ItemTest {
         Item third = new Item("Sofa");
         Item fourth = new Item("Closet");
         List<Item> items = new ArrayList<>(List.of(first,
-                second,third, fourth));
+                second, third, fourth));
         items.sort(new ItemDescByName());
         List<Item> expected = new ArrayList<>(List.of(first, third, fourth, second));
         assertEquals(expected, items);
