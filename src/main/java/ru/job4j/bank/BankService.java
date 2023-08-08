@@ -90,9 +90,9 @@ public class BankService {
 
     /**
      * method transfers the money
-     * @param srcPassport accepts source User's passport number
+     * @param srcPassport accepts source User's field passport number
      * @param srcRequisite accepts source User's account number
-     * @param destPassport accepts destination User's passport number
+     * @param destPassport accepts destination User's field passport number
      * @param destRequisite accepts destination User's account number
      * @param amount accepts amount for transfer
      * @return transfer boolean condition
