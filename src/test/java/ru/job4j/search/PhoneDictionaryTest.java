@@ -19,6 +19,10 @@ class PhoneDictionaryTest {
         phones.add(
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
+        phones.add(
+                new Person("Sergey", "Ivanov", "687543", "Moscow")
+
+        );
         ArrayList<Person> persons = phones.find("Petr");
         assertThat(persons.get(0).getSurname()).isEqualTo("Arsentev");
     }
@@ -31,5 +35,47 @@ class PhoneDictionaryTest {
         );
     ArrayList<Person> person = phones.find("Oleg");
     Assertions.assertTrue(person.isEmpty());
+    }
+
+    @Test
+    public void whenFindBySurname() {
+        PhoneDictionary phones = new PhoneDictionary();
+        phones.add(
+                new Person("Petr", "Arsentev", "534872", "Bryansk")
+
+        );
+        phones.add(
+                new Person("Sergey", "Ivanov", "687543", "Moscow")
+        );
+        ArrayList<Person> persons = phones.find("Arsentev");
+        assertThat(persons.get(0).getName()).isEqualTo("Petr");
+    }
+
+    @Test
+    public void whenFindByAddress() {
+        PhoneDictionary phones = new PhoneDictionary();
+        phones.add(
+                new Person("Petr", "Arsentev", "534872", "Bryansk")
+
+        );
+        phones.add(
+                new Person("Sergey", "Ivanov", "687543", "Moscow")
+        );
+        ArrayList<Person> persons = phones.find("Moscow");
+        assertThat(persons.get(0).getName()).isEqualTo("Sergey");
+    }
+
+    @Test
+    public void whenFindByPhone() {
+        PhoneDictionary phones = new PhoneDictionary();
+        phones.add(
+                new Person("Petr", "Arsentev", "534872", "Bryansk")
+
+        );
+        phones.add(
+                new Person("Sergey", "Ivanov", "687543", "Moscow")
+        );
+        ArrayList<Person> persons = phones.find("534872");
+        assertThat(persons.get(0).getName()).isEqualTo("Petr");
     }
 }
